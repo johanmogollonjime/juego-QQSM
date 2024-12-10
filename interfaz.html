@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Niveles</title>
+
+  <!-- Agregar enlace a Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEJRxBBi0vJ+q5rbFiQeR9AlGyNRZp5r4ft1qBHiTwh7xPbgcV6ggD1D6E2g1" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+ <style>
+    /* Estilo global */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+      background: url('fondojuego.jpg') no-repeat center center/cover;
+      background-size: cover; /* Asegura que el fondo cubra toda la pantalla */
+      background-attachment: fixed; /* Mantiene el fondo fijo al hacer scroll */
+      height: 100vh; /* Se asegura de cubrir toda la altura */
+      color: white;
+    }
+
+    header {
+      padding: 20px;
+      padding-bottom: 10px;
+      padding-top: 5px;
+      font-size: 2.5rem;
+      color: gold;
+    }
+
+    h1 {
+      font-size: 2rem;
+      color: gold;
+    }
+
+    #levels-container {
+      margin-top: 0px;
+      padding: 20px;
+      padding-top: 0px;
+      border-radius: 10px;
+    }
+
+    .level {
+      padding: 10px;
+      background-color: rgba(41, 101, 160, 0.8);
+      color: black;
+      margin: 10px;
+      border-radius: 40px;
+      cursor: pointer;
+      font-size: 1rem;
+      border: none;
+      display: block;
+      width: 60%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .level:hover {
+      background-color: rgb(129, 109, 228);
+    }
+
+    /* Hacer que el diseño sea responsive */
+    @media (max-width: 768px) {
+      header {
+        font-size: 1.8rem;
+      }
+      .level {
+        font-size: 0.9rem;
+        width: 80%;
+      }
+      h1 {
+        font-size: 1.5rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+ <!-- Menú de navegación -->
+ <nav class="navbar navbar-expand-lg navbar-dark ">
+  <div class="container-fluid">
+    <a class="navbar-brand">Millonario</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Inicio</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+  <header>
+    <h1>¿Quién quiere ser millonario?</h1>
+  </header>
+
+  <main class="container">
+    <div id="levels-container">
+      <h2>¡Selecciona un nivel para comenzar el juego!</h2>
+      <p>A continuación se encuentran los niveles y los premios. ¡Haz clic en el nivel 1 para comenzar!</p>
+      
+      <!-- Lista de niveles con premios -->
+      <button class="level" onclick="startGame(1)">Nivel 1 - Premio: $100</button>
+      <button class="level" >Nivel 2 - Premio: $200</button>
+      <button class="level" >Nivel 3 - Premio: $300</button>
+      <button class="level" >Nivel 4 - Premio: $500</button>
+      <button class="level" >Nivel 5 - Premio: $1,000</button>
+      <button class="level" >Nivel 6 - Premio: $2,000</button>
+      <button class="level">Nivel 7 - Premio: $4,000</button>
+      <button class="level" >Nivel 8 - Premio: $8,000</button>
+      <button class="level" >Nivel 9 - Premio: $16,000</button>
+      <button class="level">Nivel 10 - Premio: $32,000</button>
+      <button class="level" >Nivel 11 - Premio: $64,000</button>
+      <button class="level" >Nivel 12 - Premio: $125,000</button>
+      <button class="level" >Nivel 13 - Premio: $250,000</button>
+      <button class="level">Nivel 14 - Premio: $500,000</button>
+      <button class="level" >Nivel 15 - Premio: $1,000,000</button>
+    </div>
+  </main>
+
+  <script>
+    // Redirigir a la página del juego con el nivel seleccionado
+    function startGame(level) {
+      // Enviar el nivel como parámetro en la URL para que la página de juego lo reciba
+      window.location.href = 'juego.html?level=' + level;
+    }
+  </script>
+
+  <!-- Agregar los scripts de Bootstrap -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz4fnFO9gybV6EmOHtK6I6v9Y5g5b2Kb5b6s5so5f5bsw3yOwB8EqzDhv4V" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-pzjw8f+ua7Kw1TIq0v8FqkfbFL2zQct2qB8l8GNeV9lG5W5O5p5L5zYl7yy64qC" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inicio</title>
+  
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+  <style>
+    /* Estilos personalizados */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+      background: url('fondojuego.jpg') no-repeat center center/cover;
+      color: white;
+      min-height: 100vh;
+    }
+    header {
+      padding: 20px;
+    }
+    h1 {
+      font-size: 2.5rem;
+      color: gold;
+    }
+    #logo {
+      margin: 20px auto;
+      margin-bottom: 0px;
+      width: 210px;
+      height: auto;
+      border-radius: 500px;
+    }
+    section {
+      margin: 40px auto;
+      padding: 20px;
+      border-radius: 10px;
+      max-width: 800px;
+    }
+    section h2{
+        color: blueviolet;
+    }
+    .btn-custom {
+      margin: 30px 0;
+      padding: 10px 20px;
+      background-color: gold;
+      color: black;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 5px;
+    }
+    .btn-custom:hover {
+      background-color: white;
+      color: black;
+    }
+    #reglasCollapse {
+      padding: 20px;
+      background-color: rgba(0, 0, 0, 0.7);
+      border-radius: 10px;
+    }
+    #InstruccionesCollapse {
+      padding: 20px;
+      background-color: rgba(0, 0, 0, 0.7);
+      border-radius: 10px;
+    }
+    .text{
+        color: #c03ef5;
+    }
+  </style>
+</head>
+<body>
+  <!-- Menú de navegación -->
+  <nav class="navbar navbar-expand-lg navbar-dark ">
+    <div class="container-fluid">
+      <a class="navbar-brand">Millonario</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#reglasCollapse" data-bs-toggle="collapse">Reglas del juego</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#InstruccionesCollapse" data-bs-toggle="collapse">Instrucciones</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="infoGrupo.html">Integrantes</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Contenedor para el contenido expandible de las reglas de juego -->
+<div class="collapse" id="reglasCollapse">
+    <div class="container text-start mt-3">
+      <h2 class="text">Reglas del juego</h2>
+      <ul class="list-group">
+        <li class="list-group text-white ">1. Responde correctamente para avanzar y ganar.</li>
+        <li class="list-group text-white">2. Usa tus ayudas sabiamente: 50/50, público o llamar a un amigo.</li>
+        <li class="list-group  text-white ">3. Un error termina el juego. Si fallas una respuesta, el juego termina.</li>
+        <li class="list-group  text-white ">4. El tiempo es limitado para responder, ¡no pierdas la oportunidad!</li>
+        <li class="list-group text-white ">5. Tienes un máximo de 15 preguntas para responder antes de llegar al final.</li>
+      </ul>
+    </div>
+  </div>
+  
+  <!-- Contenedor para el contenido colapsable de Instrucciones -->
+  <div class="collapse" id="InstruccionesCollapse">
+    <div class="container text-start mt-3">
+      <h2 class="text">Instrucciones del juego</h2>
+      <p class="text-white">El objetivo de "¿Quién quiere ser millonario?" es responder una serie de preguntas de opción múltiple, donde cada respuesta correcta te acerca a un premio mayor. Debes ser rápido y usar tus ayudas de manera estratégica para llegar lo más lejos posible.</p>
+      
+      <h4 class="text-white">Cómo jugar:</h4>
+      <ul class="list-group">
+        <li class="list-group text-white ">1. Elige la respuesta correcta de entre las opciones disponibles. Solo puedes elegir una opción.</li>
+        <li class="list-group text-white">2. Después de responder correctamente, avanzarás a la siguiente pregunta. Si fallas, el juego termina.</li>
+        <li class="list-group text-white ">3. Para cada pregunta, tendrás un tiempo limitado para elegir tu respuesta. No lo dejes para el último minuto.</li>
+      </ul>
+  
+      <h4 class="text-white mt-3">Ayudas:</h4>
+      <ul class="list-group">
+        <li class="list-group  text-white">1. 50/50: Elimina dos respuestas incorrectas, dejando una respuesta correcta y una incorrecta.</li>
+        <li class="list-group text-white ">2. Llamar a un amigo: Puedes pedir ayuda a un amigo que te dará su opinión sobre la respuesta correcta.</li>
+        <li class="list-group text-white">3. Público: El público vota y te proporciona una opción basada en sus respuestas.</li>
+      </ul>
+  
+      <h4 class="text-white mt-3">Final del juego:</h4>
+      <p class="text-white">Si respondes correctamente a todas las preguntas, habrás ganado el juego. ¡Felicidades! Pero recuerda, una respuesta incorrecta termina el juego, así que ten cuidado al elegir.</p>
+    </div>
+  </div>
+  
+
+  <!-- Contenido principal -->
+  <header>
+    <h1>Bienvenido a ¿Quién quiere ser millonario?</h1>
+    <!-- Logo o imagen debajo del título -->
+    <img id="logo" src="logo.jpg" alt="Logo del juego">
+  </header>
+  
+  <main class="container">
+    <section class="text-center mt-1">
+      <h2>Sobre el juego</h2>
+      <p class="text2 color-red">Demuestra tus conocimientos y gana grandes premios virtuales respondiendo preguntas. ¿Podrás llegar hasta el final? "si no llega a responder
+        ni una solo pregunta que tristeza mano."</p>
+    </section>
+    <a href="interfaz.html" class="btn btn-custom mt-2">¡Comenzar el juego!</a>
+  </main>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
